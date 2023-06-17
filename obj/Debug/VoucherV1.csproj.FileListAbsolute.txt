@@ -230,3 +230,5 @@ C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher\obj\Debu
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher\obj\Debug\VoucherV1.csproj.CopyComplete
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher\obj\Debug\VoucherV1.exe
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher\obj\Debug\VoucherV1.pdb
+C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Customize POS(DMC)\Voucher(Biotech)\obj\Debug\VoucherV1.exe
+C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Customize POS(DMC)\Voucher(Biotech)\obj\Debug\VoucherV1.pdb
