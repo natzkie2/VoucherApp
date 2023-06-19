@@ -59,12 +59,17 @@ namespace VoucherV1.Class
             //User = "root";
             //Pass = "adminspcg0612#";
 
+            Host = "192.168.1.52";
+            Database = "biotechdb";
+            User = "voucher";
+            Pass = "adminspcg0612#";
+
 
             /// FOR TESTING ///
-            Host = "localhost";
-            Database = "dmcdb";
-            User = "root";
-            Pass = "adminspcg0612#";
+            //Host = "localhost";
+            //Database = "dmcdb";
+            //User = "root";
+            //Pass = "adminspcg0612#";
 
             FetchConnection(Host, Database, Port, User, Pass);
 

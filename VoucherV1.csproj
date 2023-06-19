@@ -328,6 +328,7 @@
     <Folder Include="Forms\Vendor\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Logos\Biotech.jpg" />
     <Content Include="Resources\Logos\Jollibee.jpg" />
     <Content Include="Resources\Logos\LOGO.png" />
   </ItemGroup>
