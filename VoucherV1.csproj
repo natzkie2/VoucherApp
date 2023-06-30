@@ -199,7 +199,7 @@
     <Compile Include="Forms\voucher_path_Form.Designer.cs">
       <DependentUpon>voucher_path_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Object\ATC.cs" />
+    <Compile Include="Object\ATCDetails.cs" />
     <Compile Include="Object\BankListDetails.cs" />
     <Compile Include="Object\VoucherListDetails.cs" />
     <Compile Include="Program.cs" />
@@ -236,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\user_warehouseman_Form.resx">
       <DependentUpon>user_warehouseman_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ATC\add_atc_details_Form.resx">
+      <DependentUpon>add_atc_details_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ATC\add_atc_Form.resx">
       <DependentUpon>add_atc_Form.cs</DependentUpon>

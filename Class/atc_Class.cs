@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VoucherV1.Object;
 
 namespace VoucherV1.Class
 {
@@ -53,6 +54,77 @@ namespace VoucherV1.Class
                 }
 
             });
+        }
+
+        public bool InsertATCData(ATCDetails atc)
+        {
+            GetData(Database);
+            con.Open();
+
+            bool isInserted = false;
+
+            try
+            {
+                using (var cmd = new MySqlCommand())
+                {
+                    string sql = "INSERT INTO atc(`ID`,`Name`)VALUES" +
+                      "(NULL,@Name)";
+                    cmd.CommandText = sql;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+
+                    cmd.Parameters.AddWithValue("@Name", atc.Name);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        isInserted = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
+            return isInserted;
+        }
+
+        public bool InsertATCDetailsData(ATCDetails atc)
+        {
+            GetData(Database);
+            con.Open();
+
+            bool isInserted = false;
+
+            try
+            {
+                using (var cmd = new MySqlCommand())
+                {
+                    string sql = "INSERT INTO atcdetails(`ID`,`atc_id`,`description`)VALUES" +
+                      "(NULL,@atc_id,@description)";
+                    cmd.CommandText = sql;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+
+                    cmd.Parameters.AddWithValue("@atc_id", atc.Name);
+                    cmd.Parameters.AddWithValue("@description", atc.Description);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        isInserted = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
+            return isInserted;
         }
     }
 }

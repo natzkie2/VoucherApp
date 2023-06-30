@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VoucherV1.Object
 {
-    class ATC
+    class ATCDetails
     {
         private string id;
         private string name;

@@ -49,7 +49,7 @@ namespace VoucherV1.Forms.ATC
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(393, 42);
+            this.panel2.Size = new System.Drawing.Size(386, 42);
             this.panel2.TabIndex = 11;
             // 
             // btn_close
@@ -60,7 +60,7 @@ namespace VoucherV1.Forms.ATC
             this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_close.Font = new System.Drawing.Font("Calibri", 12F);
             this.btn_close.ForeColor = System.Drawing.Color.White;
-            this.btn_close.Location = new System.Drawing.Point(294, 0);
+            this.btn_close.Location = new System.Drawing.Point(288, 0);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(96, 38);
             this.btn_close.TabIndex = 4;
@@ -75,9 +75,9 @@ namespace VoucherV1.Forms.ATC
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(7, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 19);
+            this.label3.Size = new System.Drawing.Size(34, 19);
             this.label3.TabIndex = 0;
-            this.label3.Text = "ATC INFORMATION";
+            this.label3.Text = "ATC";
             // 
             // container
             // 
@@ -89,7 +89,7 @@ namespace VoucherV1.Forms.ATC
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(0, 0);
             this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(393, 200);
+            this.container.Size = new System.Drawing.Size(386, 159);
             this.container.TabIndex = 12;
             // 
             // rtb_atc_name
@@ -97,7 +97,7 @@ namespace VoucherV1.Forms.ATC
             this.rtb_atc_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rtb_atc_name.Location = new System.Drawing.Point(26, 76);
             this.rtb_atc_name.Name = "rtb_atc_name";
-            this.rtb_atc_name.Size = new System.Drawing.Size(339, 64);
+            this.rtb_atc_name.Size = new System.Drawing.Size(339, 32);
             this.rtb_atc_name.TabIndex = 23;
             this.rtb_atc_name.Text = "";
             // 
@@ -107,9 +107,9 @@ namespace VoucherV1.Forms.ATC
             this.label5.Location = new System.Drawing.Point(23, 53);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 15);
+            this.label5.Size = new System.Drawing.Size(61, 15);
             this.label5.TabIndex = 12;
-            this.label5.Text = "ATC";
+            this.label5.Text = "ATC NAME";
             // 
             // label7
             // 
@@ -129,25 +129,26 @@ namespace VoucherV1.Forms.ATC
             this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.ForeColor = System.Drawing.Color.White;
-            this.btn_save.Location = new System.Drawing.Point(264, 154);
+            this.btn_save.Location = new System.Drawing.Point(264, 117);
             this.btn_save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(101, 28);
             this.btn_save.TabIndex = 5;
             this.btn_save.Text = "SAVE";
             this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.Btn_save_Click);
             // 
-            // add_atc_Form
+            // Add_atc_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 200);
+            this.ClientSize = new System.Drawing.Size(386, 159);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.container);
             this.Font = new System.Drawing.Font("Calibri", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "add_atc_Form";
+            this.Name = "Add_atc_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
