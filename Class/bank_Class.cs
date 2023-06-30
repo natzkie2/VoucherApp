@@ -11,7 +11,7 @@ namespace VoucherV1.Class
 {
     class Bank_Class : DbConnection_Class
     {
-        public string Database { get; set; }
+        public new string Database { get; set; }
 
         public string Branch_Code { get; set; }
 

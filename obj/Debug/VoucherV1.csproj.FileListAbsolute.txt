@@ -319,12 +319,14 @@ C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.csproj.AssemblyReference.cache
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.exe.config
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.Admin.Admin_Form.resources
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.Admin.Override_password_form.resources
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.Admin.User_edit_Form.resources
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.Admin.User_new_Form.resources
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.Admin.user_warehouseman_Form.resources
+C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.Forms.ATC.Add_atc_Form.resources
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.Forms.Bank.Add_bank_Form.resources
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.Forms.Bank.Select_bank_Form.resources
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.Forms.Add_branch_Form.resources
@@ -347,4 +349,3 @@ C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.csproj.CopyComplete
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.exe
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.pdb
-C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(Biotech)\obj\Debug\VoucherV1.csproj.AssemblyReference.cache

@@ -51,6 +51,9 @@ namespace VoucherV1.UserControls
             dgv_voucher_history.Columns[6].HeaderText = "AMOUNT";
             dgv_voucher_history.Columns[7].HeaderText = "CHECK NUMBER";
             dgv_voucher_history.Columns[8].HeaderText = "USER";
+
+            dgv_voucher_history.Columns[6].DefaultCellStyle.Format = "N2";
+            dgv_voucher_history.Columns[6].DefaultCellStyle.FormatProvider = System.Globalization.CultureInfo.GetCultureInfo("en-US");
         }
 
         private void Dgv_voucher_history_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

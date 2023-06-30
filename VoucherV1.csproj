@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{539CDC91-38B2-4A26-912E-00E90AF8DB98}</ProjectGuid>
+    <ProjectGuid>{7844EDC0-D473-4CAE-9398-3963ACFC155A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>VoucherV1</RootNamespace>
     <AssemblyName>VoucherV1</AssemblyName>
@@ -110,6 +110,7 @@
     <Compile Include="Admin\user_warehouseman_Form.Designer.cs">
       <DependentUpon>user_warehouseman_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\atc_Class.cs" />
     <Compile Include="Class\bank_Class.cs" />
     <Compile Include="Class\bill_Class.cs" />
     <Compile Include="Class\branch_Class.cs" />
@@ -120,6 +121,18 @@
     <Compile Include="Class\user_Class.cs" />
     <Compile Include="Class\vendor_Class.cs" />
     <Compile Include="Class\voucher_Class.cs" />
+    <Compile Include="Forms\ATC\add_atc_details_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ATC\add_atc_details_Form.Designer.cs">
+      <DependentUpon>add_atc_details_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ATC\add_atc_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ATC\add_atc_Form.Designer.cs">
+      <DependentUpon>add_atc_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Bank\add_bank_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +199,7 @@
     <Compile Include="Forms\voucher_path_Form.Designer.cs">
       <DependentUpon>voucher_path_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Object\ATC.cs" />
     <Compile Include="Object\BankListDetails.cs" />
     <Compile Include="Object\VoucherListDetails.cs" />
     <Compile Include="Program.cs" />
@@ -222,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\user_warehouseman_Form.resx">
       <DependentUpon>user_warehouseman_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ATC\add_atc_Form.resx">
+      <DependentUpon>add_atc_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Bank\add_bank_Form.resx">
       <DependentUpon>add_bank_Form.cs</DependentUpon>

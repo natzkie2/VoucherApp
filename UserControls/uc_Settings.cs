@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VoucherV1.Class;
 using VoucherV1.Forms;
+using VoucherV1.Forms.ATC;
 using VoucherV1.Forms.Bank;
 
 namespace VoucherV1.UserControls
@@ -24,8 +25,9 @@ namespace VoucherV1.UserControls
 
         private void Uc_Settings_Load(object sender, EventArgs e)
         {
-            metroTabControl.SelectedIndex = 0;
+            metroTabControl.SelectedIndex = 0;         
             CheckPageSelection();
+            
         }
 
         private void CheckPageSelection()
@@ -52,6 +54,23 @@ namespace VoucherV1.UserControls
                 dgv_branch.DataSource = null;
                 dgv_vendor.DataSource = null;
                 dgv_bank.DataSource = null;
+
+                mtc_atc.SelectedIndex = 0;
+                CheckATCPageSelection();
+            }
+        }
+
+        private void CheckATCPageSelection()
+        {
+            if (mtc_atc.SelectedTab == mtc_atc.TabPages[0])
+            {
+               dgv_atc_details.DataSource = null;
+               PopulateATCDataSet(Database);
+            }
+            else if (mtc_atc.SelectedTab == mtc_atc.TabPages[1])
+            {
+                dgv_atc.DataSource = null;
+                PopulateATCDetailsDataSet(Database);
             }
         }
 
@@ -81,6 +100,34 @@ namespace VoucherV1.UserControls
             ChangeBank();
         }
 
+        private async void PopulateATCDataSet(string database)
+        {
+            Atc_Class ac = new Atc_Class
+            {
+                Database = database
+            };
+
+            dgv_atc.DataSource = null;
+            DataSet results = await ac.ShowATCDataSet();
+            dgv_atc.DataSource = results.Tables[0];
+
+            ChangeATC();
+        }
+
+        private async void PopulateATCDetailsDataSet(string database)
+        {
+            Atc_Class ac = new Atc_Class
+            {
+                Database = database
+            };
+
+            dgv_atc_details.DataSource = null;
+            DataSet results = await ac.ShowATCDetailsDataSet();
+            dgv_atc_details.DataSource = results.Tables[0];
+
+            ChangeATCDetails();
+        }
+
         private void ChangeBranch()
         {
             dgv_branch.Columns[0].Visible = false;
@@ -95,6 +142,19 @@ namespace VoucherV1.UserControls
             dgv_bank.Columns[0].Visible = false;
             dgv_bank.Columns[1].HeaderText = "BRANCH CODE";
             dgv_bank.Columns[2].HeaderText = "BANK";
+        }
+
+        private void ChangeATC()
+        {
+            dgv_atc.Columns[0].HeaderText = "ATC ID";
+            dgv_atc.Columns[1].HeaderText = "NAME";
+        }
+
+        private void ChangeATCDetails()
+        {
+            dgv_atc_details.Columns[0].Visible = false;
+            dgv_atc_details.Columns[1].HeaderText = "ATC ID";
+            dgv_atc_details.Columns[2].HeaderText = "DESCRIPTION";
         }
 
         private void Btn_branch_add_Click(object sender, EventArgs e)
@@ -126,6 +186,21 @@ namespace VoucherV1.UserControls
             CheckPageSelection();
         }
 
-       
+        private void Mtc_atc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckATCPageSelection();
+        }
+
+        private void Btn_atc_add_Click(object sender, EventArgs e)
+        {
+            using (Add_atc_Form aaf = new Add_atc_Form())
+            {
+                aaf.Database = Database;
+                if (aaf.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    CheckATCPageSelection();
+                }
+            }
+        }
     }
 }

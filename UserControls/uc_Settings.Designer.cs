@@ -38,6 +38,12 @@ namespace VoucherV1.UserControls
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.metroTabControl = new MetroFramework.Controls.MetroTabControl();
             this.mtp_vendor = new MetroFramework.Controls.MetroTabPage();
@@ -61,8 +67,23 @@ namespace VoucherV1.UserControls
             this.panel3 = new System.Windows.Forms.Panel();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.btn_bank_add = new System.Windows.Forms.Button();
-            this.mtp_other = new System.Windows.Forms.TabPage();
+            this.mtp_atc = new System.Windows.Forms.TabPage();
+            this.panel_atc_center = new System.Windows.Forms.Panel();
+            this.mtc_atc = new MetroFramework.Controls.MetroTabControl();
+            this.mtp_child_atc = new MetroFramework.Controls.MetroTabPage();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.dgv_atc = new System.Windows.Forms.DataGridView();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
+            this.btn_atc_add = new System.Windows.Forms.Button();
+            this.mtp_child_atc_detail = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.dgv_atc_details = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.btn_atc_details_add = new System.Windows.Forms.Button();
             this.pnlContainer.SuspendLayout();
             this.metroTabControl.SuspendLayout();
             this.mtp_vendor.SuspendLayout();
@@ -80,7 +101,19 @@ namespace VoucherV1.UserControls
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_bank)).BeginInit();
             this.panel3.SuspendLayout();
-            this.mtp_other.SuspendLayout();
+            this.mtp_atc.SuspendLayout();
+            this.panel_atc_center.SuspendLayout();
+            this.mtc_atc.SuspendLayout();
+            this.mtp_child_atc.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_atc)).BeginInit();
+            this.panel14.SuspendLayout();
+            this.mtp_child_atc_detail.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_atc_details)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlContainer
@@ -98,7 +131,7 @@ namespace VoucherV1.UserControls
             this.metroTabControl.Controls.Add(this.mtp_vendor);
             this.metroTabControl.Controls.Add(this.mtp_branch);
             this.metroTabControl.Controls.Add(this.mtp_bank);
-            this.metroTabControl.Controls.Add(this.mtp_other);
+            this.metroTabControl.Controls.Add(this.mtp_atc);
             this.metroTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl.Name = "metroTabControl";
@@ -505,9 +538,9 @@ namespace VoucherV1.UserControls
             // 
             // 
             this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(404, 1);
+            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(346, 1);
             this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(18, 18);
             this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox2.CustomButton.TabIndex = 1;
             this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -551,23 +584,331 @@ namespace VoucherV1.UserControls
             this.btn_bank_add.UseVisualStyleBackColor = false;
             this.btn_bank_add.Click += new System.EventHandler(this.Btn_bank_add_Click);
             // 
-            // mtp_other
+            // mtp_atc
             // 
-            this.mtp_other.Controls.Add(this.panel5);
-            this.mtp_other.Location = new System.Drawing.Point(4, 38);
-            this.mtp_other.Name = "mtp_other";
-            this.mtp_other.Size = new System.Drawing.Size(1356, 650);
-            this.mtp_other.TabIndex = 3;
-            this.mtp_other.Text = "OTHERS";
+            this.mtp_atc.Controls.Add(this.panel_atc_center);
+            this.mtp_atc.Location = new System.Drawing.Point(4, 38);
+            this.mtp_atc.Name = "mtp_atc";
+            this.mtp_atc.Size = new System.Drawing.Size(1356, 650);
+            this.mtp_atc.TabIndex = 3;
+            this.mtp_atc.Text = "ATC LIST";
+            // 
+            // panel_atc_center
+            // 
+            this.panel_atc_center.BackColor = System.Drawing.Color.White;
+            this.panel_atc_center.Controls.Add(this.mtc_atc);
+            this.panel_atc_center.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_atc_center.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel_atc_center.Location = new System.Drawing.Point(0, 0);
+            this.panel_atc_center.Name = "panel_atc_center";
+            this.panel_atc_center.Size = new System.Drawing.Size(1356, 650);
+            this.panel_atc_center.TabIndex = 6;
+            // 
+            // mtc_atc
+            // 
+            this.mtc_atc.Controls.Add(this.mtp_child_atc);
+            this.mtc_atc.Controls.Add(this.mtp_child_atc_detail);
+            this.mtc_atc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtc_atc.Location = new System.Drawing.Point(0, 0);
+            this.mtc_atc.Name = "mtc_atc";
+            this.mtc_atc.SelectedIndex = 0;
+            this.mtc_atc.Size = new System.Drawing.Size(1356, 650);
+            this.mtc_atc.TabIndex = 6;
+            this.mtc_atc.UseSelectable = true;
+            this.mtc_atc.SelectedIndexChanged += new System.EventHandler(this.Mtc_atc_SelectedIndexChanged);
+            // 
+            // mtp_child_atc
+            // 
+            this.mtp_child_atc.Controls.Add(this.panel12);
+            this.mtp_child_atc.Controls.Add(this.panel14);
+            this.mtp_child_atc.HorizontalScrollbarBarColor = true;
+            this.mtp_child_atc.HorizontalScrollbarHighlightOnWheel = false;
+            this.mtp_child_atc.HorizontalScrollbarSize = 3;
+            this.mtp_child_atc.Location = new System.Drawing.Point(4, 38);
+            this.mtp_child_atc.Name = "mtp_child_atc";
+            this.mtp_child_atc.Size = new System.Drawing.Size(1348, 608);
+            this.mtp_child_atc.TabIndex = 1;
+            this.mtp_child_atc.Text = "ATC";
+            this.mtp_child_atc.VerticalScrollbarBarColor = true;
+            this.mtp_child_atc.VerticalScrollbarHighlightOnWheel = false;
+            this.mtp_child_atc.VerticalScrollbarSize = 3;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Controls.Add(this.panel13);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel12.Location = new System.Drawing.Point(0, 34);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1348, 574);
+            this.panel12.TabIndex = 5;
+            // 
+            // panel13
+            // 
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel13.Controls.Add(this.dgv_atc);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(1348, 574);
+            this.panel13.TabIndex = 13;
+            // 
+            // dgv_atc
+            // 
+            this.dgv_atc.AllowUserToAddRows = false;
+            this.dgv_atc.AllowUserToDeleteRows = false;
+            this.dgv_atc.AllowUserToResizeColumns = false;
+            this.dgv_atc.AllowUserToResizeRows = false;
+            this.dgv_atc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_atc.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_atc.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv_atc.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_atc.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_atc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgv_atc.ColumnHeadersHeight = 30;
+            this.dgv_atc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_atc.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_atc.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dgv_atc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_atc.EnableHeadersVisualStyles = false;
+            this.dgv_atc.GridColor = System.Drawing.SystemColors.Control;
+            this.dgv_atc.Location = new System.Drawing.Point(0, 0);
+            this.dgv_atc.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_atc.Name = "dgv_atc";
+            this.dgv_atc.ReadOnly = true;
+            this.dgv_atc.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_atc.RowHeadersVisible = false;
+            this.dgv_atc.RowHeadersWidth = 51;
+            this.dgv_atc.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_atc.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgv_atc.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_atc.RowTemplate.Height = 30;
+            this.dgv_atc.RowTemplate.ReadOnly = true;
+            this.dgv_atc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_atc.Size = new System.Drawing.Size(1344, 570);
+            this.dgv_atc.TabIndex = 13;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Controls.Add(this.metroTextBox5);
+            this.panel14.Controls.Add(this.btn_atc_add);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(1348, 34);
+            this.panel14.TabIndex = 4;
+            // 
+            // metroTextBox5
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox5.CustomButton.Image = null;
+            this.metroTextBox5.CustomButton.Location = new System.Drawing.Point(396, 1);
+            this.metroTextBox5.CustomButton.Name = "";
+            this.metroTextBox5.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox5.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox5.CustomButton.TabIndex = 1;
+            this.metroTextBox5.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox5.CustomButton.UseSelectable = true;
+            this.metroTextBox5.CustomButton.Visible = false;
+            this.metroTextBox5.DisplayIcon = true;
+            this.metroTextBox5.Icon = global::VoucherV1.Properties.Resources.search_16px;
+            this.metroTextBox5.Lines = new string[0];
+            this.metroTextBox5.Location = new System.Drawing.Point(927, 6);
+            this.metroTextBox5.MaxLength = 32767;
+            this.metroTextBox5.Name = "metroTextBox5";
+            this.metroTextBox5.PasswordChar = '\0';
+            this.metroTextBox5.PromptText = "Search";
+            this.metroTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox5.SelectedText = "";
+            this.metroTextBox5.SelectionLength = 0;
+            this.metroTextBox5.SelectionStart = 0;
+            this.metroTextBox5.ShortcutsEnabled = true;
+            this.metroTextBox5.Size = new System.Drawing.Size(418, 23);
+            this.metroTextBox5.TabIndex = 10;
+            this.metroTextBox5.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox5.UseSelectable = true;
+            this.metroTextBox5.WaterMark = "Search";
+            this.metroTextBox5.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox5.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btn_atc_add
+            // 
+            this.btn_atc_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_atc_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(148)))));
+            this.btn_atc_add.FlatAppearance.BorderSize = 0;
+            this.btn_atc_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_atc_add.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atc_add.ForeColor = System.Drawing.Color.White;
+            this.btn_atc_add.Location = new System.Drawing.Point(6, 5);
+            this.btn_atc_add.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atc_add.Name = "btn_atc_add";
+            this.btn_atc_add.Size = new System.Drawing.Size(100, 24);
+            this.btn_atc_add.TabIndex = 6;
+            this.btn_atc_add.Text = "ADD";
+            this.btn_atc_add.UseVisualStyleBackColor = false;
+            this.btn_atc_add.Click += new System.EventHandler(this.Btn_atc_add_Click);
+            // 
+            // mtp_child_atc_detail
+            // 
+            this.mtp_child_atc_detail.Controls.Add(this.panel7);
+            this.mtp_child_atc_detail.Controls.Add(this.panel5);
+            this.mtp_child_atc_detail.Location = new System.Drawing.Point(4, 38);
+            this.mtp_child_atc_detail.Name = "mtp_child_atc_detail";
+            this.mtp_child_atc_detail.Size = new System.Drawing.Size(1348, 608);
+            this.mtp_child_atc_detail.TabIndex = 3;
+            this.mtp_child_atc_detail.Text = "ATC DETAIL";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel7.Location = new System.Drawing.Point(0, 34);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1348, 574);
+            this.panel7.TabIndex = 6;
+            // 
+            // panel8
+            // 
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel8.Controls.Add(this.dgv_atc_details);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1348, 574);
+            this.panel8.TabIndex = 13;
+            // 
+            // dgv_atc_details
+            // 
+            this.dgv_atc_details.AllowUserToAddRows = false;
+            this.dgv_atc_details.AllowUserToDeleteRows = false;
+            this.dgv_atc_details.AllowUserToResizeColumns = false;
+            this.dgv_atc_details.AllowUserToResizeRows = false;
+            this.dgv_atc_details.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_atc_details.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_atc_details.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv_atc_details.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_atc_details.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_atc_details.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.dgv_atc_details.ColumnHeadersHeight = 30;
+            this.dgv_atc_details.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_atc_details.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_atc_details.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dgv_atc_details.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_atc_details.EnableHeadersVisualStyles = false;
+            this.dgv_atc_details.GridColor = System.Drawing.SystemColors.Control;
+            this.dgv_atc_details.Location = new System.Drawing.Point(0, 0);
+            this.dgv_atc_details.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_atc_details.Name = "dgv_atc_details";
+            this.dgv_atc_details.ReadOnly = true;
+            this.dgv_atc_details.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_atc_details.RowHeadersVisible = false;
+            this.dgv_atc_details.RowHeadersWidth = 51;
+            this.dgv_atc_details.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_atc_details.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.dgv_atc_details.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_atc_details.RowTemplate.Height = 30;
+            this.dgv_atc_details.RowTemplate.ReadOnly = true;
+            this.dgv_atc_details.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_atc_details.Size = new System.Drawing.Size(1344, 570);
+            this.dgv_atc_details.TabIndex = 13;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Controls.Add(this.metroTextBox3);
+            this.panel5.Controls.Add(this.btn_atc_details_add);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1356, 650);
-            this.panel5.TabIndex = 0;
+            this.panel5.Size = new System.Drawing.Size(1348, 34);
+            this.panel5.TabIndex = 5;
+            // 
+            // metroTextBox3
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox3.CustomButton.Image = null;
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(339, 1);
+            this.metroTextBox3.CustomButton.Name = "";
+            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(18, 18);
+            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox3.CustomButton.TabIndex = 1;
+            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox3.CustomButton.UseSelectable = true;
+            this.metroTextBox3.CustomButton.Visible = false;
+            this.metroTextBox3.DisplayIcon = true;
+            this.metroTextBox3.Icon = global::VoucherV1.Properties.Resources.search_16px;
+            this.metroTextBox3.Lines = new string[0];
+            this.metroTextBox3.Location = new System.Drawing.Point(927, 6);
+            this.metroTextBox3.MaxLength = 32767;
+            this.metroTextBox3.Name = "metroTextBox3";
+            this.metroTextBox3.PasswordChar = '\0';
+            this.metroTextBox3.PromptText = "Search";
+            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox3.SelectedText = "";
+            this.metroTextBox3.SelectionLength = 0;
+            this.metroTextBox3.SelectionStart = 0;
+            this.metroTextBox3.ShortcutsEnabled = true;
+            this.metroTextBox3.Size = new System.Drawing.Size(418, 23);
+            this.metroTextBox3.TabIndex = 10;
+            this.metroTextBox3.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox3.UseSelectable = true;
+            this.metroTextBox3.WaterMark = "Search";
+            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btn_atc_details_add
+            // 
+            this.btn_atc_details_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_atc_details_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(148)))));
+            this.btn_atc_details_add.FlatAppearance.BorderSize = 0;
+            this.btn_atc_details_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_atc_details_add.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atc_details_add.ForeColor = System.Drawing.Color.White;
+            this.btn_atc_details_add.Location = new System.Drawing.Point(6, 5);
+            this.btn_atc_details_add.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_atc_details_add.Name = "btn_atc_details_add";
+            this.btn_atc_details_add.Size = new System.Drawing.Size(100, 24);
+            this.btn_atc_details_add.TabIndex = 6;
+            this.btn_atc_details_add.Text = "ADD";
+            this.btn_atc_details_add.UseVisualStyleBackColor = false;
             // 
             // Uc_Settings
             // 
@@ -595,7 +936,19 @@ namespace VoucherV1.UserControls
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_bank)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.mtp_other.ResumeLayout(false);
+            this.mtp_atc.ResumeLayout(false);
+            this.panel_atc_center.ResumeLayout(false);
+            this.mtc_atc.ResumeLayout(false);
+            this.mtp_child_atc.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_atc)).EndInit();
+            this.panel14.ResumeLayout(false);
+            this.mtp_child_atc_detail.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_atc_details)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -625,7 +978,22 @@ namespace VoucherV1.UserControls
         private System.Windows.Forms.Panel panel3;
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
         private System.Windows.Forms.Button btn_bank_add;
-        private System.Windows.Forms.TabPage mtp_other;
+        private System.Windows.Forms.TabPage mtp_atc;
+        private System.Windows.Forms.Panel panel_atc_center;
+        private MetroFramework.Controls.MetroTabControl mtc_atc;
+        private MetroFramework.Controls.MetroTabPage mtp_child_atc;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.DataGridView dgv_atc;
+        private System.Windows.Forms.Panel panel14;
+        private MetroFramework.Controls.MetroTextBox metroTextBox5;
+        private System.Windows.Forms.Button btn_atc_add;
+        private System.Windows.Forms.TabPage mtp_child_atc_detail;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.DataGridView dgv_atc_details;
         private System.Windows.Forms.Panel panel5;
+        private MetroFramework.Controls.MetroTextBox metroTextBox3;
+        private System.Windows.Forms.Button btn_atc_details_add;
     }
 }
