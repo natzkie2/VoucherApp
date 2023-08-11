@@ -30,26 +30,33 @@ namespace VoucherV1.Forms.ATC
         private void Btn_save_Click(object sender, EventArgs e)
         {
             Atc_Class ac = new Atc_Class();
-            string value = rtb_atc_name.Text.ToString();
 
-            ATCDetails atc = new ATCDetails()
+            if (String.IsNullOrWhiteSpace(rtb_atc_name.Text.ToString()))
             {
-                Id = null,
-                Name = value,
-                Description = null
-            };
-
-            bool isATCInserted = ac.InsertATCData(atc);
-
-            if (isATCInserted)
-            {
-                MessageBox.Show("Data inserted successfully.", "Voucher", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please input atc name.", "Voucher System", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Failed to insert data.", "Voucher", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                string value = rtb_atc_name.Text.ToString();
 
+                ATCDetails atc = new ATCDetails()
+                {
+                    Id = null,
+                    Name = value,
+                    Description = null
+                };
+
+                bool isATCInserted = ac.InsertATCData(atc);
+
+                if (isATCInserted)
+                {
+                    MessageBox.Show("Data inserted successfully.", "Voucher System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to insert data.", "Voucher System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }         
         }
     }
 }

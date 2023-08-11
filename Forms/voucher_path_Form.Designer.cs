@@ -40,6 +40,10 @@ namespace VoucherV1.Forms
             this.btn_check_save = new System.Windows.Forms.Button();
             this.tb_directory_check = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_xls_open = new System.Windows.Forms.Button();
+            this.btn_xls_save = new System.Windows.Forms.Button();
+            this.tb_directory_xls_filewriter = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -193,13 +197,73 @@ namespace VoucherV1.Forms
             this.label1.Text = "CHECK PATH:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btn_xls_open
+            // 
+            this.btn_xls_open.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_xls_open.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(148)))));
+            this.btn_xls_open.FlatAppearance.BorderSize = 0;
+            this.btn_xls_open.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xls_open.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xls_open.ForeColor = System.Drawing.Color.White;
+            this.btn_xls_open.Location = new System.Drawing.Point(228, 381);
+            this.btn_xls_open.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_xls_open.Name = "btn_xls_open";
+            this.btn_xls_open.Size = new System.Drawing.Size(117, 24);
+            this.btn_xls_open.TabIndex = 40;
+            this.btn_xls_open.Text = "OPEN";
+            this.btn_xls_open.UseVisualStyleBackColor = false;
+            this.btn_xls_open.Click += new System.EventHandler(this.Btn_xls_open_Click);
+            // 
+            // btn_xls_save
+            // 
+            this.btn_xls_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_xls_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(148)))));
+            this.btn_xls_save.FlatAppearance.BorderSize = 0;
+            this.btn_xls_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xls_save.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xls_save.ForeColor = System.Drawing.Color.White;
+            this.btn_xls_save.Location = new System.Drawing.Point(349, 381);
+            this.btn_xls_save.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_xls_save.Name = "btn_xls_save";
+            this.btn_xls_save.Size = new System.Drawing.Size(117, 24);
+            this.btn_xls_save.TabIndex = 39;
+            this.btn_xls_save.Text = "SAVE";
+            this.btn_xls_save.UseVisualStyleBackColor = false;
+            this.btn_xls_save.Click += new System.EventHandler(this.Btn_xls_save_Click);
+            // 
+            // tb_directory_xls_filewriter
+            // 
+            this.tb_directory_xls_filewriter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_directory_xls_filewriter.Enabled = false;
+            this.tb_directory_xls_filewriter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_directory_xls_filewriter.Location = new System.Drawing.Point(144, 299);
+            this.tb_directory_xls_filewriter.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_directory_xls_filewriter.Name = "tb_directory_xls_filewriter";
+            this.tb_directory_xls_filewriter.Size = new System.Drawing.Size(322, 71);
+            this.tb_directory_xls_filewriter.TabIndex = 38;
+            this.tb_directory_xls_filewriter.Text = "";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 299);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 52);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "XLS FILE WRITER PATH:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // voucher_path_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(484, 310);
+            this.ClientSize = new System.Drawing.Size(484, 427);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_xls_open);
+            this.Controls.Add(this.btn_xls_save);
+            this.Controls.Add(this.tb_directory_xls_filewriter);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_check_open);
             this.Controls.Add(this.btn_check_save);
             this.Controls.Add(this.tb_directory_check);
@@ -234,5 +298,9 @@ namespace VoucherV1.Forms
         private System.Windows.Forms.Button btn_check_save;
         private System.Windows.Forms.RichTextBox tb_directory_check;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_xls_open;
+        private System.Windows.Forms.Button btn_xls_save;
+        private System.Windows.Forms.RichTextBox tb_directory_xls_filewriter;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -68,5 +68,24 @@ namespace VoucherV1.Forms
             Settings.Default.Save();
             MessageBox.Show("Save check path complete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void Btn_xls_open_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string fileName = ofd.FileName;
+                string path = Path.GetDirectoryName(fileName);
+                tb_directory_xls_filewriter.Text = "";
+                tb_directory_xls_filewriter.Text = path + "\\";
+            }
+        }
+
+        private void Btn_xls_save_Click(object sender, EventArgs e)
+        {
+            Settings.Default["Excel"] = tb_directory_xls_filewriter.Text;
+            Settings.Default.Save();
+            MessageBox.Show("Save check path complete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

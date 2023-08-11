@@ -8,6 +8,7 @@ namespace VoucherV1.Object
 {
     public class BankListDetails
     {
+        public string AccountNumber { get; set; }
         public string Bank { get; set; }
         public string RefNumber { get; set; }
         public string Date { get; set; }

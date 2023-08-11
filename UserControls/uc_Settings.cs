@@ -154,7 +154,11 @@ namespace VoucherV1.UserControls
         {
             dgv_atc_details.Columns[0].Visible = false;
             dgv_atc_details.Columns[1].HeaderText = "ATC ID";
-            dgv_atc_details.Columns[2].HeaderText = "DESCRIPTION";
+            dgv_atc_details.Columns[2].HeaderText = "PERCENT";
+            dgv_atc_details.Columns[3].HeaderText = "DESCRIPTION";
+
+            dgv_atc_details.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgv_atc_details.Columns[2].DefaultCellStyle.Format = "N2";
         }
 
         private void Btn_branch_add_Click(object sender, EventArgs e)
@@ -197,6 +201,18 @@ namespace VoucherV1.UserControls
             {
                 aaf.Database = Database;
                 if (aaf.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    CheckATCPageSelection();
+                }
+            }
+        }
+
+        private void Btn_atc_details_add_Click(object sender, EventArgs e)
+        {
+            using (Add_atc_details_Form aadf = new Add_atc_details_Form())
+            {
+                aadf.Database = Database;
+                if (aadf.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     CheckATCPageSelection();
                 }

@@ -66,6 +66,22 @@ namespace VoucherV1.Forms.Bank
             string bank = cmb_bank.Text.ToString();
             string number = tb_check_number.Text.ToString();
 
+            Bank_Class bc = new Bank_Class
+            {
+                Database = Database
+            };
+            bc.GetBankDataByValue(bank);
+
+            string bankDetails;
+            if (String.IsNullOrWhiteSpace(bc.AccountNumber))
+            {
+                bankDetails = bank;
+            }
+            else
+            {
+                bankDetails = bank + " - " + bc.AccountNumber;
+            }
+
 
             if (bank.Equals("Select Bank..."))
             {
@@ -82,13 +98,13 @@ namespace VoucherV1.Forms.Bank
                 {
                     if (dgv_banks.Rows.Count == 0)
                     {
-                        dgv_banks.Rows.Add(1, bank, number, date, amount);
+                        dgv_banks.Rows.Add(bc.AccountNumber, bankDetails, number, date, amount);
                     }
                     else
                     {
                         Int32 count = Convert.ToInt32(dgv_banks.Rows[dgv_banks.RowCount - 1].Cells[0].Value.ToString());
 
-                        dgv_banks.Rows.Add(count + 1, bank, number, date, amount);
+                        dgv_banks.Rows.Add(bc.AccountNumber, bankDetails, number, date, amount);
                     }
                     ClearData();
                     lbl_total.Text = "₱" + String.Format("{0:0,0.00}", GetSumOfBanksAmount());
@@ -282,6 +298,7 @@ namespace VoucherV1.Forms.Bank
                             {
                                 bld.Add(new BankListDetails
                                 {
+                                    AccountNumber = item.Cells[0].Value.ToString(),
                                     Bank = item.Cells[1].Value.ToString(),
                                     RefNumber = item.Cells[2].Value.ToString(),
                                     Date = item.Cells[3].Value == null ? "" : item.Cells[3].Value.ToString(),
@@ -306,6 +323,7 @@ namespace VoucherV1.Forms.Bank
                             {
                                 bld.Add(new BankListDetails
                                 {
+                                    AccountNumber = item.Cells[0].Value.ToString(),
                                     Bank = item.Cells[1].Value.ToString(),
                                     RefNumber = item.Cells[2].Value.ToString(),
                                     Date = item.Cells[3].Value == null ? "" : item.Cells[3].Value.ToString(),
@@ -331,6 +349,7 @@ namespace VoucherV1.Forms.Bank
                             {
                                 bld.Add(new BankListDetails
                                 {
+                                    AccountNumber = item.Cells[0].Value.ToString(),
                                     Bank = item.Cells[1].Value.ToString(),
                                     RefNumber = item.Cells[2].Value.ToString(),
                                     Date = item.Cells[3].Value == null ? "" : item.Cells[3].Value.ToString(),
@@ -356,7 +375,7 @@ namespace VoucherV1.Forms.Bank
 
                     if (countRow == 0)
                     {
-                        vdf.dgv_banks.Rows[data].Cells[0].Value = 1;
+                        vdf.dgv_banks.Rows[data].Cells[0].Value = datas.AccountNumber;
                         vdf.dgv_banks.Rows[data].Cells[1].Value = datas.Bank;
                         vdf.dgv_banks.Rows[data].Cells[2].Value = datas.RefNumber;
                         vdf.dgv_banks.Rows[data].Cells[3].Value = datas.Date;
@@ -364,7 +383,7 @@ namespace VoucherV1.Forms.Bank
                     }
                     else if (countRow > 0)
                     {
-                        vdf.dgv_banks.Rows[data].Cells[0].Value = countRow += 1;
+                        vdf.dgv_banks.Rows[data].Cells[0].Value = datas.AccountNumber;
                         vdf.dgv_banks.Rows[data].Cells[1].Value = datas.Bank;
                         vdf.dgv_banks.Rows[data].Cells[2].Value = datas.RefNumber;
                         vdf.dgv_banks.Rows[data].Cells[3].Value = datas.Date;

@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VoucherV1.Object;
 
 namespace VoucherV1.Class
 {
@@ -69,7 +70,7 @@ namespace VoucherV1.Class
             MySqlDataReader rd;
             using (var cmd = new MySqlCommand())
             {
-                cmd.CommandText = "SELECT ListID, Name, IFNULL(VendorAddress_City,'#N/A') AS VendorAddress_City, IFNULL(Phone,'#N/A') AS Phone FROM vendor WHERE ListID = @id";
+                cmd.CommandText = "SELECT ListID, Name, IFNULL(VendorAddress_City,'#N/A') AS VendorAddress_City, IFNULL(CustomField3,'#N/A') AS TIN FROM vendor WHERE ListID = @id";
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = con;
 
@@ -83,10 +84,41 @@ namespace VoucherV1.Class
                     ID = rd.GetString("ListID");
                     Name = rd.GetString("Name");
                     Address = rd.GetString("VendorAddress_City");
-                    TIN = rd.GetString("Phone");
+                    TIN = rd.GetString("TIN");
                 }
             }
             return result;
+        }
+
+        public List<Vendor> FetchVendorByName(string name)
+        {
+            List<Vendor> vendors = new List<Vendor>();
+            GetData(Database);
+            con.Open();
+            MySqlDataReader rd;
+            using (var cmd = new MySqlCommand())
+            {
+                cmd.CommandText = "SELECT ListID, Name, IFNULL(VendorAddress_City,'#N/A') AS VendorAddress_City, IFNULL(CustomField3,'#N/A') AS TIN FROM vendor WHERE Name = @name";
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = con;
+
+                cmd.Parameters.Add("@name", MySqlDbType.VarChar).Value = name;
+
+                rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    Vendor vendor = new Vendor
+                    {
+                        Name = rd.GetString("Name"),
+                        Address = rd.GetString("VendorAddress_City"),
+                        Tin = rd.GetString("TIN"),
+                        Zip = "",
+                    };
+                    vendors.Add(vendor);
+                }
+            }
+            return vendors;
         }
     }
 }

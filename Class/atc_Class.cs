@@ -102,13 +102,14 @@ namespace VoucherV1.Class
             {
                 using (var cmd = new MySqlCommand())
                 {
-                    string sql = "INSERT INTO atcdetails(`ID`,`atc_id`,`description`)VALUES" +
-                      "(NULL,@atc_id,@description)";
+                    string sql = "INSERT INTO atcdetails(`ID`,`atc_id`,`percent`,`description`)VALUES" +
+                      "(NULL,@atc_id,@percent,@description)";
                     cmd.CommandText = sql;
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
 
                     cmd.Parameters.AddWithValue("@atc_id", atc.Name);
+                    cmd.Parameters.AddWithValue("@percent", atc.Percent);
                     cmd.Parameters.AddWithValue("@description", atc.Description);
 
                     int rowsAffected = cmd.ExecuteNonQuery();
@@ -125,6 +126,62 @@ namespace VoucherV1.Class
             }
 
             return isInserted;
+        }
+
+        public List<string> FetchATCDataCombobox()
+        {
+            List<string> comboBoxData = new List<string>();
+
+            GetData(Database);
+            con.Open();
+
+            using (var cmd = new MySqlCommand())
+            {
+                string sql = "SELECT Name FROM atc";
+                cmd.CommandText = sql;
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = con;
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    comboBoxData.Add(reader["Name"].ToString());
+                }
+                reader.Close();
+            }
+            return comboBoxData;
+        }
+
+        public List<ATCDetails> FetchATCDetailsByName(string name)
+        {
+            List<ATCDetails> atc = new List<ATCDetails>();
+            GetData(Database);
+            con.Open();
+            MySqlDataReader rd;
+            using (var cmd = new MySqlCommand())
+            {
+                cmd.CommandText = "SELECT * FROM atcdetails WHERE atc_id = @id";
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = con;
+
+                cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = name;
+
+                rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    ATCDetails details = new ATCDetails
+                    {
+                        Id = rd.GetString("ID"),
+                        Name = rd.GetString("atc_id"),
+                        Percent = rd.GetDouble("percent"),
+                        Description = rd.GetString("description"),
+                    };
+                    atc.Add(details);
+                }
+            }
+            return atc;
         }
     }
 }

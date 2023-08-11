@@ -57,15 +57,20 @@ namespace VoucherV1.Forms.Bank
 
             if (string.IsNullOrWhiteSpace(rtb_bank_name.Text.ToString()))
             {
-
+                MessageBox.Show("Please enter Bank Name.","Voucher System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (string.IsNullOrWhiteSpace(tb_accountNumber.Text.ToString()))
+            {
+                MessageBox.Show("Please enter Account Number.", "Voucher System", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 string value = cmb_branch.Text.ToString();
                 string bank = rtb_bank_name.Text.ToString();
+                string accountNumber = tb_accountNumber.Text.ToString();
                 bc.GetBranchDataByName(value);
 
-                if (bankClass.InsertBank(bc.Branch_Code, bank))
+                if (bankClass.InsertBank(bc.Branch_Code, bank, accountNumber))
                 {
 
                 }

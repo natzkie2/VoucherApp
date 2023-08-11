@@ -72,11 +72,27 @@ namespace VoucherV1.Forms
             }
             else
             {
-                if (vc.UpdateVoucherAddCheckNumber(CVNumber, check_number) == true)
-                {                 
-                    PrintChecks(cmb_bank.Text.ToString());
-                    this.Hide();
-                    this.Close();
+                DateTime checkDate = mtb_date.Value;
+                string stringDate = checkDate.ToString("yyyy-MM-dd");
+
+
+                if (tb_payee.Text.ToString().Equals(Payee))
+                {
+                    if (vc.UpdateVoucherAddCheckNumber(CVNumber, check_number, null, stringDate) == true)
+                    {
+                        PrintChecks(cmb_bank.Text.ToString());
+                        this.Hide();
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    if (vc.UpdateVoucherAddCheckNumber(CVNumber, check_number, tb_payee.Text.ToString(), stringDate) == true)
+                    {
+                        PrintChecks(cmb_bank.Text.ToString());
+                        this.Hide();
+                        this.Close();
+                    }
                 }
             }      
          }

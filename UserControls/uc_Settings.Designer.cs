@@ -611,7 +611,7 @@ namespace VoucherV1.UserControls
             this.mtc_atc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mtc_atc.Location = new System.Drawing.Point(0, 0);
             this.mtc_atc.Name = "mtc_atc";
-            this.mtc_atc.SelectedIndex = 0;
+            this.mtc_atc.SelectedIndex = 1;
             this.mtc_atc.Size = new System.Drawing.Size(1356, 650);
             this.mtc_atc.TabIndex = 6;
             this.mtc_atc.UseSelectable = true;
@@ -865,9 +865,9 @@ namespace VoucherV1.UserControls
             // 
             // 
             this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(339, 1);
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(396, 1);
             this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(18, 18);
+            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox3.CustomButton.TabIndex = 1;
             this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -909,6 +909,7 @@ namespace VoucherV1.UserControls
             this.btn_atc_details_add.TabIndex = 6;
             this.btn_atc_details_add.Text = "ADD";
             this.btn_atc_details_add.UseVisualStyleBackColor = false;
+            this.btn_atc_details_add.Click += new System.EventHandler(this.Btn_atc_details_add_Click);
             // 
             // Uc_Settings
             // 

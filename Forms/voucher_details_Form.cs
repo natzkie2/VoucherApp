@@ -273,9 +273,11 @@ namespace VoucherV1.Forms
                             int data = sbf.dgv_banks.Rows.Add();
                             int countRow = sbf.dgv_banks.Rows.Count;
 
+                            bc.GetBankDataByValue(datas.Bank);
+
                             if (countRow == 0)
                             {
-                                sbf.dgv_banks.Rows[data].Cells[0].Value = 1;
+                                sbf.dgv_banks.Rows[data].Cells[0].Value = bc.AccountNumber;
                                 sbf.dgv_banks.Rows[data].Cells[1].Value = datas.Bank;
                                 sbf.dgv_banks.Rows[data].Cells[2].Value = datas.RefNumber;
                                 sbf.dgv_banks.Rows[data].Cells[3].Value = datas.Date;
@@ -284,7 +286,7 @@ namespace VoucherV1.Forms
                             }
                             else if (countRow > 0)
                             {
-                                sbf.dgv_banks.Rows[data].Cells[0].Value = countRow += 1;
+                                sbf.dgv_banks.Rows[data].Cells[0].Value = bc.AccountNumber;
                                 sbf.dgv_banks.Rows[data].Cells[1].Value = datas.Bank;
                                 sbf.dgv_banks.Rows[data].Cells[2].Value = datas.RefNumber;
                                 sbf.dgv_banks.Rows[data].Cells[3].Value = datas.Date;
@@ -411,7 +413,8 @@ namespace VoucherV1.Forms
 
 
         private void PrintVoucher()
-        {                   
+        {
+            string AccountNumber = "";
             ReportDataSource rdsVoucher = new ReportDataSource();
             ReportDataSource rdsBank = new ReportDataSource();
 
@@ -461,11 +464,15 @@ namespace VoucherV1.Forms
             }
 
 
+
             for (int i = 0; i < dgv_banks.Rows.Count; i++)
             {
+                string accountNumber = dgv_banks.Rows[i].Cells[0].Value.ToString();
                 string bank = dgv_banks.Rows[i].Cells[1].Value.ToString();
                 string refNumber = dgv_banks.Rows[i].Cells[2].Value.ToString();
                 string date = dgv_banks.Rows[i].Cells[3].Value.ToString();
+
+                AccountNumber = accountNumber;
 
                 double amount;
                 if (String.IsNullOrEmpty(dgv_banks.Rows[i].Cells[4].Value.ToString()))
@@ -513,7 +520,7 @@ namespace VoucherV1.Forms
 
                 DateTime dt = DateTime.Now;
 
-                if (vc.InsertVoucherHistory(dt.ToString("yyyy-MM-dd hh:mm:ss"), cmb_branch.Text.ToString(), tb_payee.Text.ToString(), 
+                if (vc.InsertVoucherHistory(dt.ToString("yyyy-MM-dd hh:mm:ss"), cmb_branch.Text.ToString(), AccountNumber, tb_payee.Text.ToString(), 
                     tb_cv_number.Text.ToString(), tb_memo.Text.ToString(), Convert.ToString(GetSumOfVoucherAmount() - Tax), User_login_Form.First_Name + " " + User_login_Form.Last_Name) == true)
                 {
                     PopulateCVNumber();

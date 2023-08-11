@@ -35,9 +35,11 @@ namespace VoucherV1.Forms.Bank
             this.container = new System.Windows.Forms.Panel();
             this.cmb_branch = new System.Windows.Forms.ComboBox();
             this.rtb_bank_name = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_save = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tb_accountNumber = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.container.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +85,8 @@ namespace VoucherV1.Forms.Bank
             // container
             // 
             this.container.BackColor = System.Drawing.Color.White;
+            this.container.Controls.Add(this.tb_accountNumber);
+            this.container.Controls.Add(this.label1);
             this.container.Controls.Add(this.cmb_branch);
             this.container.Controls.Add(this.rtb_bank_name);
             this.container.Controls.Add(this.label5);
@@ -91,7 +95,7 @@ namespace VoucherV1.Forms.Bank
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(0, 42);
             this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(393, 226);
+            this.container.Size = new System.Drawing.Size(393, 289);
             this.container.TabIndex = 10;
             // 
             // cmb_branch
@@ -112,16 +116,6 @@ namespace VoucherV1.Forms.Bank
             this.rtb_bank_name.TabIndex = 23;
             this.rtb_bank_name.Text = "";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 78);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 15);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "BANK NAME";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -140,7 +134,7 @@ namespace VoucherV1.Forms.Bank
             this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.ForeColor = System.Drawing.Color.White;
-            this.btn_save.Location = new System.Drawing.Point(275, 179);
+            this.btn_save.Location = new System.Drawing.Point(275, 242);
             this.btn_save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(90, 28);
@@ -149,11 +143,40 @@ namespace VoucherV1.Forms.Bank
             this.btn_save.UseVisualStyleBackColor = false;
             this.btn_save.Click += new System.EventHandler(this.Btn_save_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(23, 78);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 15);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "BANK NAME";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 175);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 15);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "ACCOUNT NUMBER";
+            // 
+            // tb_accountNumber
+            // 
+            this.tb_accountNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_accountNumber.Location = new System.Drawing.Point(26, 201);
+            this.tb_accountNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_accountNumber.Name = "tb_accountNumber";
+            this.tb_accountNumber.Size = new System.Drawing.Size(339, 23);
+            this.tb_accountNumber.TabIndex = 45;
+            // 
             // Add_bank_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 268);
+            this.ClientSize = new System.Drawing.Size(393, 331);
             this.ControlBox = false;
             this.Controls.Add(this.container);
             this.Controls.Add(this.panel2);
@@ -177,9 +200,11 @@ namespace VoucherV1.Forms.Bank
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel container;
         private System.Windows.Forms.RichTextBox rtb_bank_name;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.ComboBox cmb_branch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tb_accountNumber;
     }
 }

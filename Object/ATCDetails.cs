@@ -10,10 +10,12 @@ namespace VoucherV1.Object
     {
         private string id;
         private string name;
+        private double percent;
         private string description;
 
         public string Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public string Description { get => description; set => description = value; }
+        public double Percent { get => percent; set => percent = value; }
     }
 }

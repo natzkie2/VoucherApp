@@ -17,6 +17,8 @@ namespace VoucherV1.Class
 
         public string Description { get; set; }
 
+        public string AccountNumber { get; set; }
+
 
         public ArrayList bankFill = new ArrayList();
 
@@ -116,6 +118,7 @@ namespace VoucherV1.Class
                         result = true;
                         Branch_Code = rd.GetString("Branch_Code");
                         Description = rd.GetString("Description");
+                        AccountNumber = rd.GetString("AccountNumber");
                     }
                 }
                 catch (Exception ex)
@@ -131,7 +134,7 @@ namespace VoucherV1.Class
             return result;           
         }
 
-        public bool InsertBank(string branch_code, string bank)
+        public bool InsertBank(string branch_code, string bank, string accountNumber)
         {
             bool result = false;
 
@@ -140,14 +143,15 @@ namespace VoucherV1.Class
 
             using (var cmd = new MySqlCommand())
             {
-                string sql = "INSERT INTO bank(`ID`,`Branch_Code`,`Description`)VALUES" +
-                    "(NULL,@Code,@Name)";
+                string sql = "INSERT INTO bank(`ID`,`Branch_Code`,`Description`,`AccountNumber`)VALUES" +
+                    "(NULL,@Code,@Name,@AccountNumber)";
                 cmd.CommandText = sql;
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = con;
 
                 cmd.Parameters.Add("@Code", MySqlDbType.VarChar).Value = branch_code;
                 cmd.Parameters.Add("@Name", MySqlDbType.VarChar).Value = bank;
+                cmd.Parameters.Add("@AccountNumber", MySqlDbType.VarChar).Value = accountNumber;
                 try
                 {
                     cmd.ExecuteNonQuery();

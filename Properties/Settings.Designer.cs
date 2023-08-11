@@ -46,5 +46,17 @@ namespace VoucherV1.Properties {
                 this["Check"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Excel {
+            get {
+                return ((string)(this["Excel"]));
+            }
+            set {
+                this["Excel"] = value;
+            }
+        }
     }
 }
