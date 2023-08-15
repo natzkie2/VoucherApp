@@ -23,9 +23,8 @@ namespace VoucherV1.Forms.BIR
         public string Address { set; get; }
         public string TIN { set; get; }
         public string ZIP { set; get; }
+        public string ATC { set; get; }
         public double Amount { set; get; }
-
-
 
 
         const string payorName = "DIAMOND MILLENIUM CORPORATION";
@@ -65,7 +64,8 @@ namespace VoucherV1.Forms.BIR
                 tb_payee.Text = vendor.Name;
                 tb_address.Text = vendor.Address;
                 tb_tin.Text = vendor.Tin;
-                tb_zip.Text = "9000";
+                tb_zip.Text = vendor.Zip;
+                ATC = vendor.Atc;
             }
         }
 
@@ -74,6 +74,7 @@ namespace VoucherV1.Forms.BIR
             Atc_Class ac = new Atc_Class();
             List<string> comboBoxData = ac.FetchATCDataCombobox();
             cmb_atc.DataSource = comboBoxData;
+            cmb_atc.Text = ATC;
         }
 
         private void Cmb_atc_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,7 +85,7 @@ namespace VoucherV1.Forms.BIR
 
             foreach (var detail in details)
             {
-                tb_percent.Text = String.Format("{0:#,##0.000}", detail.Percent);
+                tb_percent.Text = String.Format("{0:#,##0.00}", detail.Percent);
             }
         }
 

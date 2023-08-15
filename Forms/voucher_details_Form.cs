@@ -435,7 +435,8 @@ namespace VoucherV1.Forms
                new ReportParameter("rp_payment_method", Method),
                new ReportParameter("rp_total", lbl_total.Text.ToString()),
                new ReportParameter("rp_memo", tb_memo.Text.ToString()),
-               new ReportParameter("rp_tax", String.Format("{0:0,0.00}", Tax))
+               new ReportParameter("rp_tax", String.Format("{0:0,0.00}", Tax)),
+               new ReportParameter("rp_class", cmb_branch.Text.ToString())
             };
 
             for (int i = 0; i < dgv_bills.Rows.Count; i++)

@@ -548,4 +548,5 @@ C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(DMC)\obj
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(DMC)\obj\Debug\VoucherV1.csproj.CopyComplete
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(DMC)\obj\Debug\VoucherV1.exe
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(DMC)\obj\Debug\VoucherV1.pdb
+C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(DMC)\obj\Debug\VoucherV1.Print.BIR.form2306.resources
 C:\Users\SPCG-Benjie\source\repos\Xystema App Dev\Point Of Sale\Voucher(DMC)\obj\Debug\VoucherV1.csproj.AssemblyReference.cache

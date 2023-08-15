@@ -70,7 +70,7 @@ namespace VoucherV1.Class
             MySqlDataReader rd;
             using (var cmd = new MySqlCommand())
             {
-                cmd.CommandText = "SELECT ListID, Name, IFNULL(VendorAddress_City,'#N/A') AS VendorAddress_City, IFNULL(CustomField3,'#N/A') AS TIN FROM vendor WHERE ListID = @id";
+                cmd.CommandText = "SELECT ListID, Name, IFNULL(VendorAddress_City,'#N/A') AS VendorAddress_City, IFNULL(CustomField4,'#N/A') AS TIN FROM vendor WHERE ListID = @id";
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = con;
 
@@ -98,7 +98,8 @@ namespace VoucherV1.Class
             MySqlDataReader rd;
             using (var cmd = new MySqlCommand())
             {
-                cmd.CommandText = "SELECT ListID, Name, IFNULL(VendorAddress_City,'#N/A') AS VendorAddress_City, IFNULL(CustomField3,'#N/A') AS TIN FROM vendor WHERE Name = @name";
+                cmd.CommandText = "SELECT ListID, Name, IFNULL(VendorAddress_City,'#N/A') AS VendorAddress_City, IFNULL(CustomField4,'#N/A') AS TIN, " +
+                    "IFNULL(CustomField5,'#N/A') AS ZIP, IFNULL(CustomField1,'#N/A') AS ATC  FROM vendor WHERE Name = @name";
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = con;
 
@@ -113,7 +114,8 @@ namespace VoucherV1.Class
                         Name = rd.GetString("Name"),
                         Address = rd.GetString("VendorAddress_City"),
                         Tin = rd.GetString("TIN"),
-                        Zip = "",
+                        Zip = rd.GetString("ZIP"),
+                        Atc = rd.GetString("ATC")
                     };
                     vendors.Add(vendor);
                 }

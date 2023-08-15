@@ -30,14 +30,18 @@ namespace VoucherV1.Forms.ExcelFileWriter
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_close = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.centerPanel = new System.Windows.Forms.Panel();
             this.dgv_fileWriter = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_export = new System.Windows.Forms.Button();
+            this.tb_search_vendor = new MetroFramework.Controls.MetroTextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.item_bank = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.item_checkNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,9 +62,6 @@ namespace VoucherV1.Forms.ExcelFileWriter
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_export = new System.Windows.Forms.Button();
-            this.tb_search_vendor = new MetroFramework.Controls.MetroTextBox();
             this.panel2.SuspendLayout();
             this.centerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_fileWriter)).BeginInit();
@@ -158,14 +159,14 @@ namespace VoucherV1.Forms.ExcelFileWriter
             this.Column14,
             this.Column15});
             this.dgv_fileWriter.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 9.75F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_fileWriter.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 9.75F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_fileWriter.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_fileWriter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_fileWriter.EnableHeadersVisualStyles = false;
             this.dgv_fileWriter.GridColor = System.Drawing.SystemColors.Control;
@@ -176,13 +177,77 @@ namespace VoucherV1.Forms.ExcelFileWriter
             this.dgv_fileWriter.RowHeadersVisible = false;
             this.dgv_fileWriter.RowHeadersWidth = 51;
             this.dgv_fileWriter.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_fileWriter.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_fileWriter.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_fileWriter.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_fileWriter.RowTemplate.Height = 30;
             this.dgv_fileWriter.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_fileWriter.Size = new System.Drawing.Size(1056, 520);
             this.dgv_fileWriter.TabIndex = 30;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btn_export);
+            this.panel1.Controls.Add(this.tb_search_vendor);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1056, 34);
+            this.panel1.TabIndex = 3;
+            // 
+            // btn_export
+            // 
+            this.btn_export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_export.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btn_export.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_export.FlatAppearance.BorderSize = 0;
+            this.btn_export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_export.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_export.ForeColor = System.Drawing.Color.White;
+            this.btn_export.Location = new System.Drawing.Point(951, 5);
+            this.btn_export.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_export.Name = "btn_export";
+            this.btn_export.Size = new System.Drawing.Size(100, 24);
+            this.btn_export.TabIndex = 37;
+            this.btn_export.Text = "EXPORT";
+            this.btn_export.UseVisualStyleBackColor = false;
+            this.btn_export.Click += new System.EventHandler(this.Btn_export_Click);
+            // 
+            // tb_search_vendor
+            // 
+            // 
+            // 
+            // 
+            this.tb_search_vendor.CustomButton.Image = null;
+            this.tb_search_vendor.CustomButton.Location = new System.Drawing.Point(248, 1);
+            this.tb_search_vendor.CustomButton.Name = "";
+            this.tb_search_vendor.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tb_search_vendor.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tb_search_vendor.CustomButton.TabIndex = 1;
+            this.tb_search_vendor.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_search_vendor.CustomButton.UseSelectable = true;
+            this.tb_search_vendor.CustomButton.Visible = false;
+            this.tb_search_vendor.DisplayIcon = true;
+            this.tb_search_vendor.Icon = global::VoucherV1.Properties.Resources.search_16px;
+            this.tb_search_vendor.Lines = new string[0];
+            this.tb_search_vendor.Location = new System.Drawing.Point(1083, 6);
+            this.tb_search_vendor.MaxLength = 32767;
+            this.tb_search_vendor.Name = "tb_search_vendor";
+            this.tb_search_vendor.PasswordChar = '\0';
+            this.tb_search_vendor.PromptText = "Search";
+            this.tb_search_vendor.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_search_vendor.SelectedText = "";
+            this.tb_search_vendor.SelectionLength = 0;
+            this.tb_search_vendor.SelectionStart = 0;
+            this.tb_search_vendor.ShortcutsEnabled = true;
+            this.tb_search_vendor.Size = new System.Drawing.Size(270, 23);
+            this.tb_search_vendor.TabIndex = 10;
+            this.tb_search_vendor.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_search_vendor.UseSelectable = true;
+            this.tb_search_vendor.WaterMark = "Search";
+            this.tb_search_vendor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_search_vendor.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -198,6 +263,8 @@ namespace VoucherV1.Forms.ExcelFileWriter
             // item_bank
             // 
             this.item_bank.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.Format = "N2";
+            this.item_bank.DefaultCellStyle = dataGridViewCellStyle3;
             this.item_bank.FillWeight = 112.6827F;
             this.item_bank.HeaderText = "CHECK AMOUNT";
             this.item_bank.Name = "item_bank";
@@ -333,70 +400,6 @@ namespace VoucherV1.Forms.ExcelFileWriter
             this.Column15.HeaderText = "REMARKS";
             this.Column15.Name = "Column15";
             this.Column15.Width = 81;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btn_export);
-            this.panel1.Controls.Add(this.tb_search_vendor);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1056, 34);
-            this.panel1.TabIndex = 3;
-            // 
-            // btn_export
-            // 
-            this.btn_export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_export.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btn_export.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btn_export.FlatAppearance.BorderSize = 0;
-            this.btn_export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_export.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_export.ForeColor = System.Drawing.Color.White;
-            this.btn_export.Location = new System.Drawing.Point(951, 5);
-            this.btn_export.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_export.Name = "btn_export";
-            this.btn_export.Size = new System.Drawing.Size(100, 24);
-            this.btn_export.TabIndex = 37;
-            this.btn_export.Text = "EXPORT";
-            this.btn_export.UseVisualStyleBackColor = false;
-            this.btn_export.Click += new System.EventHandler(this.Btn_export_Click);
-            // 
-            // tb_search_vendor
-            // 
-            // 
-            // 
-            // 
-            this.tb_search_vendor.CustomButton.Image = null;
-            this.tb_search_vendor.CustomButton.Location = new System.Drawing.Point(248, 1);
-            this.tb_search_vendor.CustomButton.Name = "";
-            this.tb_search_vendor.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tb_search_vendor.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_search_vendor.CustomButton.TabIndex = 1;
-            this.tb_search_vendor.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_search_vendor.CustomButton.UseSelectable = true;
-            this.tb_search_vendor.CustomButton.Visible = false;
-            this.tb_search_vendor.DisplayIcon = true;
-            this.tb_search_vendor.Icon = global::VoucherV1.Properties.Resources.search_16px;
-            this.tb_search_vendor.Lines = new string[0];
-            this.tb_search_vendor.Location = new System.Drawing.Point(1083, 6);
-            this.tb_search_vendor.MaxLength = 32767;
-            this.tb_search_vendor.Name = "tb_search_vendor";
-            this.tb_search_vendor.PasswordChar = '\0';
-            this.tb_search_vendor.PromptText = "Search";
-            this.tb_search_vendor.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_search_vendor.SelectedText = "";
-            this.tb_search_vendor.SelectionLength = 0;
-            this.tb_search_vendor.SelectionStart = 0;
-            this.tb_search_vendor.ShortcutsEnabled = true;
-            this.tb_search_vendor.Size = new System.Drawing.Size(270, 23);
-            this.tb_search_vendor.TabIndex = 10;
-            this.tb_search_vendor.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_search_vendor.UseSelectable = true;
-            this.tb_search_vendor.WaterMark = "Search";
-            this.tb_search_vendor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_search_vendor.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Excel_filewriter_export_Form
             // 

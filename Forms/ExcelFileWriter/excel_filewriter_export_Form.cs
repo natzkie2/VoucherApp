@@ -147,11 +147,24 @@ namespace VoucherV1.Forms.ExcelFileWriter
                 headerRow.Style.Fill.PatternType = ExcelFillStyle.Solid;
                 headerRow.Style.Fill.BackgroundColor.SetColor(Color.FromArgb(41, 128, 185));
 
-                // Protect the worksheet (optional - to prevent other modifications)
-                worksheet.Protection.IsProtected = true;
+                
+
+                double numericValue;
+                if (double.TryParse(worksheet.Cells[2, 2, worksheet.Dimension.End.Row, 2].Text, out numericValue))
+                {
+                    worksheet.Cells[2, 2, worksheet.Dimension.End.Row, 2].Value = numericValue;
+                }
+
+
+                worksheet.Cells[2, 2, worksheet.Dimension.End.Row, 2].Style.Numberformat.Format = "General";
+                worksheet.Cells[2, 2, worksheet.Dimension.End.Row, 2].Style.Numberformat.Format = "#,##0.00";
 
                 headerRow.Style.Font.Color.SetColor(Color.White);
                 headerRow.Style.Font.Bold = true;
+
+                // Protect the worksheet (optional - to prevent other modifications)
+                worksheet.Protection.IsProtected = true;
+                worksheet.Protection.AllowSelectLockedCells = true;
 
                 // Autofit all columns in the worksheet
                 worksheet.Cells.AutoFitColumns();

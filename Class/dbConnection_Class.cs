@@ -66,9 +66,14 @@ namespace VoucherV1.Class
 
 
             /// FOR TESTING ///
-            Host = "localhost";
-            Database = "dmcdb";
-            User = "root";
+            //Host = "localhost";
+            //Database = "dmcdb";
+            //User = "root";
+            //Pass = "adminspcg0612#";
+
+            Host = "192.168.8.220";
+            Database = "dmc_sandbox";
+            User = "voucher";
             Pass = "adminspcg0612#";
 
             FetchConnection(Host, Database, Port, User, Pass);

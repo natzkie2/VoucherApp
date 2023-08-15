@@ -94,6 +94,8 @@ namespace VoucherV1.UserControls
                 Double due = Convert.ToDouble(row["AmountDue"].ToString());
                 string memo = row["Memo"].ToString();
 
+              
+
                 string dates = dueDate.ToString("yyyy-MM-dd");
 
                 dgv_bills.Rows.Add(0, RefNumber, dates, due, memo, due);

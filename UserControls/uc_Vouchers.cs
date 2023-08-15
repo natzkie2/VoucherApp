@@ -59,7 +59,6 @@ namespace VoucherV1.UserControls
                 double amount = Convert.ToDouble(row["Amount"].ToString());
                 string checkNumber = row["CheckNumber"].ToString();
                 string checkName = row["CheckName"].ToString();
-                
                 int isVoid = Convert.ToInt32(row["Void"].ToString());
                 int exported = Convert.ToInt32(row["Exported"].ToString());
                 int isPayeeAccountOnly = Convert.ToInt32(row["IsPayeeAccountOnly"].ToString());

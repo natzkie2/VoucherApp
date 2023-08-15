@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.33529.622
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoucherV1", "VoucherV1.csproj", "{7844EDC0-D473-4CAE-9398-3963ACFC155A}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "VoucherSystV1", "..\VoucherSystV1\VoucherSystV1.vdproj", "{779D42A1-C353-440A-A0D9-D96AB938CC68}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "VoucherSys", "..\VoucherSys\VoucherSys.vdproj", "{AA39624A-F565-497B-9121-6862F5423A8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,8 @@ Global
 		{7844EDC0-D473-4CAE-9398-3963ACFC155A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7844EDC0-D473-4CAE-9398-3963ACFC155A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7844EDC0-D473-4CAE-9398-3963ACFC155A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{779D42A1-C353-440A-A0D9-D96AB938CC68}.Debug|Any CPU.ActiveCfg = Debug
-		{779D42A1-C353-440A-A0D9-D96AB938CC68}.Debug|Any CPU.Build.0 = Debug
-		{779D42A1-C353-440A-A0D9-D96AB938CC68}.Release|Any CPU.ActiveCfg = Release
-		{779D42A1-C353-440A-A0D9-D96AB938CC68}.Release|Any CPU.Build.0 = Release
+		{AA39624A-F565-497B-9121-6862F5423A8B}.Debug|Any CPU.ActiveCfg = Debug
+		{AA39624A-F565-497B-9121-6862F5423A8B}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
