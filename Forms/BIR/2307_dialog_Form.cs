@@ -27,7 +27,7 @@ namespace VoucherV1.Forms.BIR
         public double Amount { set; get; }
 
 
-        const string payorName = "DIAMOND MILLENIUM CORPORATION";
+        const string payorName = "DIAMOND MILLENNIUM CORPORATION";
         const string payorAddress = "LIMKETKAI CORPORATE OFFICE, LKKS MALLS LAPASAN, CAGAYAN DE ORO CITY";
         const string payorZip = "9000";
         const string payorTin1st = "005";

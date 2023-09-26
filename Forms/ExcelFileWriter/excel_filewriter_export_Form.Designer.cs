@@ -263,6 +263,7 @@ namespace VoucherV1.Forms.ExcelFileWriter
             // item_bank
             // 
             this.item_bank.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle3.Format = "N2";
             this.item_bank.DefaultCellStyle = dataGridViewCellStyle3;
             this.item_bank.FillWeight = 112.6827F;

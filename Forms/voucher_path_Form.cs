@@ -42,6 +42,7 @@ namespace VoucherV1.Forms
         {
             tb_directory_voucher.Text = Settings.Default["Path"].ToString();
             tb_directory_check.Text = Settings.Default["Check"].ToString();
+            tb_directory_xls_filewriter.Text = Settings.Default["Excel"].ToString();
         }
 
         private void Btn_close_Click(object sender, EventArgs e)

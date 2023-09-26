@@ -88,7 +88,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>DIAMOND MILLENNIUM CORPOTATION</Value>
+                    <Value>DIAMOND MILLENNIUM CORPORATION</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -243,7 +243,7 @@
                   <TextRun>
                     <Value>=Parameters!rp_payee.Value</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
+                      <FontSize>8pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -815,7 +815,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -907,7 +906,7 @@
             <Top>2.92569in</Top>
             <Left>0.36333in</Left>
             <Height>0.2in</Height>
-            <Width>1.0382in</Width>
+            <Width>1.22042in</Width>
             <ZIndex>15</ZIndex>
             <Style>
               <Border>
@@ -938,9 +937,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox20</rd:DefaultName>
             <Top>2.92569in</Top>
-            <Left>1.40319in</Left>
+            <Left>1.61152in</Left>
             <Height>0.2in</Height>
-            <Width>1.47264in</Width>
+            <Width>1.51431in</Width>
             <ZIndex>16</ZIndex>
             <Style>
               <Border>
@@ -1664,7 +1663,7 @@
                   <TextRun>
                     <Value>=Parameters!rp_prepared_by.Value</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
+                      <FontSize>8pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1675,7 +1674,7 @@
             <Top>3.98278in</Top>
             <Left>0.36333in</Left>
             <Height>0.2in</Height>
-            <Width>1.45062in</Width>
+            <Width>1.60803in</Width>
             <ZIndex>32</ZIndex>
             <Style>
               <Border>
@@ -1696,7 +1695,7 @@
                   <TextRun>
                     <Value>=Parameters!rp_checked_by.Value</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
+                      <FontSize>8pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1707,7 +1706,7 @@
             <Top>3.99736in</Top>
             <Left>2.0408in</Left>
             <Height>0.2in</Height>
-            <Width>1.43097in</Width>
+            <Width>1.83765in</Width>
             <ZIndex>33</ZIndex>
             <Style>
               <Border>
@@ -1728,7 +1727,7 @@
                   <TextRun>
                     <Value>=Parameters!rp_approved_by.Value</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
+                      <FontSize>8pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1739,7 +1738,7 @@
             <Top>3.99736in</Top>
             <Left>3.94792in</Left>
             <Height>0.2in</Height>
-            <Width>1.43097in</Width>
+            <Width>1.76263in</Width>
             <ZIndex>34</ZIndex>
             <Style>
               <Border>
@@ -1760,7 +1759,7 @@
                   <TextRun>
                     <Value>=Parameters!rp_received_by.Value</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
+                      <FontSize>8pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>

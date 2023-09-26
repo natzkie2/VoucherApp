@@ -30,9 +30,9 @@ namespace VoucherV1.Print.BIR
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form2307));
             DevExpress.XtraReports.Parameters.SeparatorLayoutItem separatorLayoutItem1 = new DevExpress.XtraReports.Parameters.SeparatorLayoutItem();
             DevExpress.XtraReports.Parameters.SeparatorLayoutItem separatorLayoutItem2 = new DevExpress.XtraReports.Parameters.SeparatorLayoutItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form2307));
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
@@ -90,6 +90,7 @@ namespace VoucherV1.Print.BIR
             this.periodFromYY = new DevExpress.XtraReports.Parameters.Parameter();
             this.periodToDD = new DevExpress.XtraReports.Parameters.Parameter();
             this.periodToYY = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
             this.objectDataSource = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTablePayment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource)).BeginInit();
@@ -381,6 +382,7 @@ namespace VoucherV1.Print.BIR
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel21,
             this.xrLabel1stQuart,
             this.xrLabel2ndQuart,
             this.xrLabel3rdQuart,
@@ -395,7 +397,7 @@ namespace VoucherV1.Print.BIR
             // xrLabel1stQuart
             // 
             this.xrLabel1stQuart.Font = new DevExpress.Drawing.DXFont("arial narrow", 8F);
-            this.xrLabel1stQuart.LocationFloat = new DevExpress.Utils.PointFloat(278.8742F, 137F);
+            this.xrLabel1stQuart.LocationFloat = new DevExpress.Utils.PointFloat(278.8742F, 104.3611F);
             this.xrLabel1stQuart.Multiline = true;
             this.xrLabel1stQuart.Name = "xrLabel1stQuart";
             this.xrLabel1stQuart.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -408,7 +410,7 @@ namespace VoucherV1.Print.BIR
             // xrLabel2ndQuart
             // 
             this.xrLabel2ndQuart.Font = new DevExpress.Drawing.DXFont("arial narrow", 8F);
-            this.xrLabel2ndQuart.LocationFloat = new DevExpress.Utils.PointFloat(377.9581F, 137F);
+            this.xrLabel2ndQuart.LocationFloat = new DevExpress.Utils.PointFloat(377.9581F, 104.3611F);
             this.xrLabel2ndQuart.Multiline = true;
             this.xrLabel2ndQuart.Name = "xrLabel2ndQuart";
             this.xrLabel2ndQuart.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -421,7 +423,7 @@ namespace VoucherV1.Print.BIR
             // xrLabel3rdQuart
             // 
             this.xrLabel3rdQuart.Font = new DevExpress.Drawing.DXFont("arial narrow", 8F);
-            this.xrLabel3rdQuart.LocationFloat = new DevExpress.Utils.PointFloat(480.958F, 137F);
+            this.xrLabel3rdQuart.LocationFloat = new DevExpress.Utils.PointFloat(480.958F, 104.3611F);
             this.xrLabel3rdQuart.Multiline = true;
             this.xrLabel3rdQuart.Name = "xrLabel3rdQuart";
             this.xrLabel3rdQuart.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -434,7 +436,7 @@ namespace VoucherV1.Print.BIR
             // xrLabelTotal
             // 
             this.xrLabelTotal.Font = new DevExpress.Drawing.DXFont("arial narrow", 8F);
-            this.xrLabelTotal.LocationFloat = new DevExpress.Utils.PointFloat(580.9581F, 137F);
+            this.xrLabelTotal.LocationFloat = new DevExpress.Utils.PointFloat(580.9581F, 104.3611F);
             this.xrLabelTotal.Multiline = true;
             this.xrLabelTotal.Name = "xrLabelTotal";
             this.xrLabelTotal.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -447,7 +449,7 @@ namespace VoucherV1.Print.BIR
             // xrLabelTax
             // 
             this.xrLabelTax.Font = new DevExpress.Drawing.DXFont("arial narrow", 8F);
-            this.xrLabelTax.LocationFloat = new DevExpress.Utils.PointFloat(683F, 137F);
+            this.xrLabelTax.LocationFloat = new DevExpress.Utils.PointFloat(682.9999F, 104.3611F);
             this.xrLabelTax.Multiline = true;
             this.xrLabelTax.Name = "xrLabelTax";
             this.xrLabelTax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -485,7 +487,7 @@ namespace VoucherV1.Print.BIR
             // 
             // xrTableDetail
             // 
-            this.xrTableDetail.Font = new DevExpress.Drawing.DXFont("Arial Narrow", 8.5F);
+            this.xrTableDetail.Font = new DevExpress.Drawing.DXFont("Arial Narrow", 9F);
             this.xrTableDetail.Multiline = true;
             this.xrTableDetail.Name = "xrTableDetail";
             this.xrTableDetail.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -493,7 +495,7 @@ namespace VoucherV1.Print.BIR
             this.xrTableDetail.StylePriority.UsePadding = false;
             this.xrTableDetail.StylePriority.UseTextAlignment = false;
             this.xrTableDetail.Text = "xrTableDetail";
-            this.xrTableDetail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrTableDetail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableDetail.Weight = 2.1899998181949D;
             // 
             // xrTableCell2
@@ -692,6 +694,19 @@ namespace VoucherV1.Print.BIR
             this.periodToYY.Description = "periodToYY";
             this.periodToYY.Name = "periodToYY";
             // 
+            // xrLabel21
+            // 
+            this.xrLabel21.Font = new DevExpress.Drawing.DXFont("arial", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(0F, 368.0955F);
+            this.xrLabel21.Multiline = true;
+            this.xrLabel21.Name = "xrLabel21";
+            this.xrLabel21.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel21.SizeF = new System.Drawing.SizeF(804.0001F, 32.02777F);
+            this.xrLabel21.StylePriority.UseFont = false;
+            this.xrLabel21.StylePriority.UseTextAlignment = false;
+            this.xrLabel21.Text = resources.GetString("xrLabel21.Text");
+            this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
             // objectDataSource
             // 
             this.objectDataSource.DataSource = typeof(VoucherV1.Object.TaxPayment);
@@ -823,5 +838,6 @@ namespace VoucherV1.Print.BIR
         private DevExpress.XtraReports.UI.XRLabel xrLabel3rdQuart;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2ndQuart;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1stQuart;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel21;
     }
 }

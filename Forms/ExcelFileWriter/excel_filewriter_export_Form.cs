@@ -163,8 +163,8 @@ namespace VoucherV1.Forms.ExcelFileWriter
                 headerRow.Style.Font.Bold = true;
 
                 // Protect the worksheet (optional - to prevent other modifications)
-                worksheet.Protection.IsProtected = true;
-                worksheet.Protection.AllowSelectLockedCells = true;
+                //worksheet.Protection.IsProtected = true;
+                //worksheet.Protection.AllowSelectLockedCells = true;
 
                 // Autofit all columns in the worksheet
                 worksheet.Cells.AutoFitColumns();

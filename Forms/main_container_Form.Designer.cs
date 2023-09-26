@@ -33,7 +33,6 @@ namespace VoucherV1.Forms
             this.panelTop = new System.Windows.Forms.Panel();
             this.btn_bills = new System.Windows.Forms.Button();
             this.btn_menu_voucher = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.btn_settings = new System.Windows.Forms.Button();
             this.lbl_datetime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@ namespace VoucherV1.Forms
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.panelTop.Controls.Add(this.btn_bills);
             this.panelTop.Controls.Add(this.btn_menu_voucher);
-            this.panelTop.Controls.Add(this.button2);
             this.panelTop.Controls.Add(this.btn_settings);
             this.panelTop.Controls.Add(this.lbl_datetime);
             this.panelTop.Controls.Add(this.label1);
@@ -76,7 +74,7 @@ namespace VoucherV1.Forms
             this.btn_bills.ForeColor = System.Drawing.Color.White;
             this.btn_bills.Image = global::VoucherV1.Properties.Resources.paycheque_16px;
             this.btn_bills.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_bills.Location = new System.Drawing.Point(874, 26);
+            this.btn_bills.Location = new System.Drawing.Point(959, 26);
             this.btn_bills.Name = "btn_bills";
             this.btn_bills.Size = new System.Drawing.Size(82, 23);
             this.btn_bills.TabIndex = 14;
@@ -94,30 +92,13 @@ namespace VoucherV1.Forms
             this.btn_menu_voucher.ForeColor = System.Drawing.Color.White;
             this.btn_menu_voucher.Image = global::VoucherV1.Properties.Resources.voucher_16px;
             this.btn_menu_voucher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_menu_voucher.Location = new System.Drawing.Point(962, 26);
+            this.btn_menu_voucher.Location = new System.Drawing.Point(1047, 26);
             this.btn_menu_voucher.Name = "btn_menu_voucher";
             this.btn_menu_voucher.Size = new System.Drawing.Size(96, 23);
             this.btn_menu_voucher.TabIndex = 13;
-            this.btn_menu_voucher.Text = "      VOUCHER";
+            this.btn_menu_voucher.Text = "      HISTORY";
             this.btn_menu_voucher.UseVisualStyleBackColor = true;
             this.btn_menu_voucher.Click += new System.EventHandler(this.Btn_menu_voucher_Click);
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::VoucherV1.Properties.Resources.museum_16px;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(1064, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "      VENDOR";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // btn_settings
             // 
@@ -248,7 +229,6 @@ namespace VoucherV1.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_datetime;
         private System.Windows.Forms.Button btn_settings;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_menu_voucher;
         private System.Windows.Forms.Button btn_bills;
         private System.Windows.Forms.Timer timerTime;

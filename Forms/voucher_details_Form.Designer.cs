@@ -33,13 +33,13 @@ namespace VoucherV1.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_container = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.tb_tax = new System.Windows.Forms.TextBox();
@@ -57,6 +57,11 @@ namespace VoucherV1.Forms
             this.btn_bank = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.dgv_banks = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.item_bank = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.item_checkNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.item_checkDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.item_checkAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_total = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -86,11 +91,6 @@ namespace VoucherV1.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.btn_close = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.item_checkAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.item_checkDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.item_checkNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.item_bank = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_banks)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -358,6 +358,51 @@ namespace VoucherV1.Forms
             this.dgv_banks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_banks.Size = new System.Drawing.Size(836, 106);
             this.dgv_banks.TabIndex = 29;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn1.FillWeight = 112.6827F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "#";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // item_bank
+            // 
+            this.item_bank.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.item_bank.FillWeight = 112.6827F;
+            this.item_bank.HeaderText = "BANK";
+            this.item_bank.Name = "item_bank";
+            this.item_bank.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // item_checkNum
+            // 
+            this.item_checkNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.item_checkNum.HeaderText = "CHECK NUMBER";
+            this.item_checkNum.Name = "item_checkNum";
+            this.item_checkNum.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // item_checkDate
+            // 
+            this.item_checkDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.item_checkDate.FillWeight = 112.6827F;
+            this.item_checkDate.HeaderText = "CHECK DATE";
+            this.item_checkDate.Name = "item_checkDate";
+            this.item_checkDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // item_checkAmount
+            // 
+            this.item_checkAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.item_checkAmount.DefaultCellStyle = dataGridViewCellStyle3;
+            this.item_checkAmount.FillWeight = 112.6827F;
+            this.item_checkAmount.HeaderText = "CHECK AMOUNT";
+            this.item_checkAmount.Name = "item_checkAmount";
+            this.item_checkAmount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // lbl_total
             // 
@@ -698,51 +743,6 @@ namespace VoucherV1.Forms
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(887, 36);
             this.panel2.TabIndex = 4;
-            // 
-            // item_checkAmount
-            // 
-            this.item_checkAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.item_checkAmount.DefaultCellStyle = dataGridViewCellStyle3;
-            this.item_checkAmount.FillWeight = 112.6827F;
-            this.item_checkAmount.HeaderText = "CHECK AMOUNT";
-            this.item_checkAmount.Name = "item_checkAmount";
-            this.item_checkAmount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // item_checkDate
-            // 
-            this.item_checkDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.item_checkDate.FillWeight = 112.6827F;
-            this.item_checkDate.HeaderText = "CHECK DATE";
-            this.item_checkDate.Name = "item_checkDate";
-            this.item_checkDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // item_checkNum
-            // 
-            this.item_checkNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.item_checkNum.HeaderText = "CHECK NUMBER";
-            this.item_checkNum.Name = "item_checkNum";
-            this.item_checkNum.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // item_bank
-            // 
-            this.item_bank.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.item_bank.FillWeight = 112.6827F;
-            this.item_bank.HeaderText = "BANK";
-            this.item_bank.Name = "item_bank";
-            this.item_bank.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn1.FillWeight = 112.6827F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "#";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // Voucher_details_Form
             // 
